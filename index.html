@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="2025年中国日历 - 含农历、节假日、日程管理">
+    <meta name="keywords" content="2025日历,农历,节假日,日程管理,效率工具">
+    <title>2025年中国日历 - 你的贴心日程助手</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- 添加图标字体 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 页面标题 -->
+        <header>
+            <h1>2025年中国日历</h1>
+            <div class="app-description">
+                <p>📅 农历+节假日+日程管理，助你轻松规划生活</p>
+            </div>
+            <div class="share-buttons">
+                <button class="share-btn" onclick="shareToXiaohongshu()">
+                    <i class="fas fa-share-alt"></i> 分享到小红书
+                </button>
+                <button class="save-btn" onclick="saveAsImage()">
+                    <i class="fas fa-download"></i> 保存日历截图
+                </button>
+            </div>
+        </header>
+
+        <!-- 月份导航 -->
+        <nav class="month-nav">
+            <ul>
+                <li><a href="#" data-month="0">一月</a></li>
+                <li><a href="#" data-month="1">二月</a></li>
+                <li><a href="#" data-month="2">三月</a></li>
+                <li><a href="#" data-month="3">四月</a></li>
+                <li><a href="#" data-month="4">五月</a></li>
+                <li><a href="#" data-month="5">六月</a></li>
+                <li><a href="#" data-month="6">七月</a></li>
+                <li><a href="#" data-month="7">八月</a></li>
+                <li><a href="#" data-month="8">九月</a></li>
+                <li><a href="#" data-month="9">十月</a></li>
+                <li><a href="#" data-month="10">十一月</a></li>
+                <li><a href="#" data-month="11">十二月</a></li>
+            </ul>
+        </nav>
+
+        <!-- 年历视图 -->
+        <div class="calendar-container"></div>
+
+        <!-- 月份详情弹窗 -->
+        <div class="month-modal" style="display: none;">
+            <div class="month-modal-content">
+                <div class="month-modal-header">
+                    <h2 class="month-title"></h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="month-calendar"></div>
+            </div>
+        </div>
+
+        <!-- 节假日说明 -->
+        <div class="holiday-info">
+            <h2>2025年节假日安排</h2>
+            <div class="holiday-list">
+                <div class="holiday-section">
+                    <h3>法定节假日</h3>
+                    <ul>
+                        <li>元旦：2025年1月1日</li>
+                        <li>春节：2025年2月9日至15日</li>
+                        <li>清明节：2025年4月5日</li>
+                        <li>劳动节：2025年5月1日至3日</li>
+                        <li>端午节：2025年6月14日</li>
+                        <li>中秋节：2025年9月21日</li>
+                        <li>国庆节：2025年10月1日至7日</li>
+                    </ul>
+                </div>
+                <div class="holiday-section">
+                    <h3>其他重要节日</h3>
+                    <ul>
+                        <li>情人节：2025年2月14日</li>
+                        <li>妇女节：2025年3月8日</li>
+                        <li>植树节：2025年3月12日</li>
+                        <li>愚人节：2025年4月1日</li>
+                        <li>青年节：2025年5月4日</li>
+                        <li>儿童节：2025年6月1日</li>
+                        <li>教师节：2025年9月10日</li>
+                        <li>万圣节：2025年10月31日</li>
+                        <li>圣诞节：2025年12月25日</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-tips">
+        <div class="tip-item">💡 双击日期添加日程</div>
+        <div class="tip-item">📱 点击月份查看详情</div>
+        <div class="tip-item">🔄 长按可保存分享</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="js/lunar.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html> 
